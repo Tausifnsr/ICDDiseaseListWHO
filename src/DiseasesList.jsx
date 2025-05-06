@@ -14,7 +14,7 @@ const DiseasesList = () => {
     setError(null);
 
     try {
-      const response = axios.get("https://your-backend.onrender.com/api/diseases?q=fever")
+      const response = axios.get("https://icd-backend.onrender.com/api/diseases?q=${query}")
       setDiseases(response.data);
     } catch (err) {
       setError("Failed to fetch diseases");
